@@ -1,14 +1,16 @@
 document.getElementById('login-form').addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const crewId = document.getElementById('crew-id').value;
+    // CREW ID ko uppercase mein convert karna
+    const crewId = document.getElementById('crew-id').value.toUpperCase();
     const password = document.getElementById('password').value;
 
     const response = await fetch('BSPCREW.csv');
     const data = await response.text();
     const rows = data.split('\n').map(row => row.split(','));
 
-    const crew = rows.find(row => row[0] === crewId && row[1] === password);
+    // CREW ID aur Password match karne ki condition
+    const crew = rows.find(row => row[0].toUpperCase() === crewId && row[1] === password);
 
     if (crew) {
         localStorage.setItem('crewId', crew[0]);
