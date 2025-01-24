@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Running Room Feedback</title>
+    <link rel="stylesheet" href="runningroom.css">
+</head>
+<body>
+    <div class="form-container">
+        <!-- Crew Info -->
+        <div class="crew-info">
+            <p><strong>Crew ID:</strong> <span id="crew-id"></span></p>
+            <p><strong>Crew Name:</strong> <span id="crew-name"></span></p>
+            <p><strong>Designation:</strong> <span id="crew-desg"></span></p>
+            <p><strong>HQ:</strong> <span id="crew-hq"></span></p>
+        </div>
+
+        <h2>BSP Running Room Food Feedback Form / बीएसपी रनिंग रूम फीडबैक फॉर्म</h2>
+
+        <!-- Feedback Form -->
+        <form id="feedback-form">
+            <div class="form-group">
+                <label for="meal-type">Select Your Meal Type / अपना भोजन प्रकार चुनें</label>
+                <select id="meal-type" name="meal-type" required>
+                    <option value="">-- Select / चुनें --</option>
+                    <option value="breakfast">Breakfast / नाश्ता</option>
+                    <option value="lunch">Lunch / दोपहर का खाना</option>
+                    <option value="dinner">Dinner / रात का खाना</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="meal-menu">Is Meal Given as Per Menu? / क्या भोजन मेनू के अनुसार है?</label>
+                <select id="meal-menu" name="meal-menu" required>
+                    <option value="">-- Select / चुनें --</option>
+                    <option value="yes">Yes / हां</option>
+                    <option value="no">No / नहीं</option>
+                </select>
+            </div>
+
+            <!-- Ratings -->
+            <div class="form-group">
+                <label>Rate the Following / निम्नलिखित को रेट करें:</label>
+
+                <div class="rating-group">
+                    <label for="taste">Taste / स्वाद</label>
+                    <select id="taste" name="taste" required>
+                        <option value="">-- Select Rating --</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="rating-group">
+                    <label for="quality">Quality of Ingredients / सामग्री की गुणवत्ता</label>
+                    <select id="quality" name="quality" required>
+                        <option value="">-- Select Rating --</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="rating-group">
+                    <label for="timely_served">Timely Served / समय पर परोसा गया</label>
+                    <select id="timely_served" name="timely_served" required>
+                        <option value="">-- Select Rating --</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+
+                <div class="rating-group">
+                    <label for="hygiene">Hygiene and Cleanliness / स्वच्छता</label>
+                    <select id="hygiene" name="hygiene" required>
+                        <option value="">-- Select Rating --</option>
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="suggestions">Any Other Suggestions / अन्य सुझाव</label>
+                <textarea id="suggestions" name="suggestions" rows="4"></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="runningroom.js"></script>
+</body>
+</html>

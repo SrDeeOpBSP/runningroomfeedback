@@ -1,0 +1,164 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f7fc;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Form Container */
+.form-container {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Crew Info Styling */
+.crew-info {
+    background-color: #f2f8ff;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.crew-info p {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.crew-info strong {
+    color: #007bff;
+}
+
+/* Heading Styling */
+h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Form Groups */
+.form-group {
+    text-align: left;
+}
+
+label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #fafafa;
+}
+
+select:focus, textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Ratings Styling */
+.rating-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating-group select {
+    width: 60px;
+}
+
+/* Submit Button */
+button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+button:disabled {
+    background: #b3d0ff;
+    cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .rating-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .rating-group select {
+        width: 100%;
+    }
+}
+
+/* Mobile-Friendly Text */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 20px;
+    }
+
+    .crew-info p {
+        font-size: 14px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}

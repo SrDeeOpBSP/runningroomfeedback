@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+        <p>Please note: Your password is your date of birth. For example, if your DOB is 06-03-1992, your password will be <strong>6031992</strong>. If your DOB is 22-05-1989, your password will be <strong>22051989</strong>.</p>
+        <form id="login-form">
+            <div class="form-group">
+                <label for="crew-id">Crew ID</label>
+                <input type="text" id="crew-id" name="crew-id" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
