@@ -42,6 +42,7 @@ document.getElementById('feedback-form').addEventListener('submit', async (event
     const hygiene = document.getElementById('hygiene').value;
     const suggestions = document.getElementById('suggestions').value;
     const runningroom = document.getElementById('running-room').value;
+    const couponnumber = document.getElementById('food-coupon').value;
 
     // Ensure all required data is available
     if (!crewId || !crewName || !crewDesg || !crewHq) {
@@ -54,7 +55,7 @@ document.getElementById('feedback-form').addEventListener('submit', async (event
 
     try {
         // Send data to Google Apps Script Web App
-        const response = await fetch('https://script.google.com/macros/s/AKfycby9-sfyThsRj4hW-F397aVBs3SbzzNtftypRX9V1eDcy2u4FP60PRrhzA53SzqL2EuG/exec', {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbxv5zzvOhZM4a8VIaCm-UXst85ZNjITRJpAhn7BfbiBQzz_lXV9YgoL0BHT8ulVyMCR/exec', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: new URLSearchParams({
@@ -69,7 +70,8 @@ document.getElementById('feedback-form').addEventListener('submit', async (event
                 timelyServed,
                 hygiene,
                 suggestions,
-                runningroom
+                runningroom,
+                couponnumber
             })
         });
 
